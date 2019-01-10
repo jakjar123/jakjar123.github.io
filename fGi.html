@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+<img src="Logo2.jpg" alt="Tatami Fightwear Logo" style="width:450px;height:150px;">
+<link rel="stylesheet" href="web.css">
+
+<!-- The navigation menu -->
+<div class="navbar">
+  <a href="index.html">Home</a>
+  <div class="subnav">
+    <button class="subnavbtn">Male Fightwear <i class="fa fa-caret-down"></i></button>
+    <div class="subnav-content">
+      <a href="mGi.html">BJJ Gi</a>
+      <a href="mNogi">No-Gi</a>
+      
+    </div>
+  </div> 
+  <div class="subnav">
+    <button class="subnavbtn">Female Fightwear <i class="fa fa-caret-down"></i></button>
+    <div class="subnav-content">
+      <a href="fGi">BJJ Gi</a>
+      <a href="fNogi">No-Gi</a>
+
+    </div>
+  </div> 
+  
+  <a href="#contact">Accessories</a>
+</div>
+<h1>Discover our latest Tatamifighwear Gi- The Estilo 6.0</h1>
+<!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    
+    <img src="img1.jpg" style="width:100%; height: 800px;">
+    <div class="text" >Stunning Design</div>
+  </div>
+
+  <div class="mySlides fade">
+    
+    <img src="img2.jpg" style="width:100%; height: 800px;">
+    <div class="text">Woven Inside Lining</div>
+  </div>
+
+  <div class="mySlides fade">
+    
+    <img src="img3.jpg" style="width:100%; height: 800px;">
+    <div class="text">550GSM Pearl Weave Jacket</div>
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1} 
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none"; 
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block"; 
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+<h2>Popular Items</h2>
+<figure>
+    <img style = "width:450px; height:400px; border-radius: 50%;" src='pop1.jpg' alt='Estilo 6.0' />
+    <figcaption>£99.00</figcaption>
+</figure>
+<figure>
+    <img style = "width:450px; height:400px; border-radius: 50%;" src='pop2.jpg' alt='Japan Series' />
+    <figcaption>£120.00</figcaption>
+</figure>
+<figure>
+    <img style = "width:450px; height:400px; border-radius: 50%;" src='pop3.jpg' alt='Rash Guard' />
+    <figcaption>£35.99</figcaption>
+</figure>
+<figure>
+    <img style = "width:450px; height:400px; border-radius: 50%;" src='pop4.jpg' alt='Nova MK4' />
+    <figcaption>£59.99</figcaption>
+</figure>
+<figure>
+    <img style = "width:450px; height:400px; border-radius: 50%;" src='pop5.jpg' alt='Belts' />
+    <figcaption>£15.99</figcaption>
+</figure>
+<figure>
+    <img style = "width:450px; height:400px; border-radius: 50%;" src='pop6.jpg' alt='Shorts' />
+    <figcaption>£25.00</figcaption>
+</figure>
+</body>
+</html>

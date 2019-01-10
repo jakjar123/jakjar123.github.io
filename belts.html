@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<link rel="stylesheet" href="CSS/web.css">
+<img src="Assets/logo2.jpg" alt="Tatami Fightwear Logo" style="width:450px;height:150px;">
+
+
+<!-- The navigation menu -->
+<div class="navbar">
+  <a href="index.html">Home</a>
+  <div class="subnav">
+    <button class="subnavbtn">Male Fightwear <i class="dropdown"></i></button>
+    <div class="subnav-content">
+      <a href="mGi.html">BJJ Gi</a>
+      <a href="mNogi.html">No-Gi</a>
+      
+    </div>
+  </div> 
+  <a href="demo.html">Demo</a>
+
+  
+  <a href="belts.html">Belts</a>
+</div>
+
+
+<h2>BJJ Belts-£15.99</h2>
+
+
+ <img style = "width:450px; height:400px;" src='Assets/pop5.jpg' alt='BJJ Belts' class = "center"/>
+ 
+ 
+	
+	<h2>Length</h2>
+	
+	<select class = "center" style = "width:10%" name="Length">
+	<option value="A1">A1/275</option>
+	<option value="A2">A2/283</option>
+	<option value="A3">A3/293</option>
+	<option value="A4">A4/308</option>
+	</select>
+
+<p>Current belt colour-</p>
+
+<!-- displays a bar with colours that are defined by the user -->
+
+<input type="color" style = "width:10%;" id="myColor">
+
+<p>Please pick the colour of the belt by selecting below<br>For custom colour click on the belt above and chose!</p>
+
+<!-- when the user presses one of the buttons the appropriate function is called to change the colour of the bar -->
+
+<button onclick="whitebelt()">White</button>
+<button onclick="bluebelt()">Blue</button>
+<button onclick="purplebelt()">Purple</button>
+<button onclick="brownbelt()">Brown</button>
+<button onclick="blackbelt()">Black</button>
+<br><br>
+	
+<button onclick='alert("Item added to the basket successfully")'class = "center" style = "width:10%;" >Add item to basket</button>
+
+<h3>Product Description</h3>
+
+<p style = "padding-left:50px; padding-right:50px;"> The BJJ Belt represents more than just your rank in Brazilian Jiu Jitsu - it represents hours
+ on the mat, blood, sweat and tears, the <br>journey your have been on since the first time you stepped on to the mat. The BJJ rank belt from Tatami Fightwear is built to the highest standards. 
+ 
+ <h3>Key Features</h3>
+<p style = "padding-left:50px; padding-right:50px;">-Stunning design <br>
+- The belts are 4cm wide and 0.5 cm thick<br>
+- Includes Tatami's S, M, L and XL sizes</p>
+
+<!-- JavaScript to change the colour of the bar based on the user input -->
+<script>
+function whitebelt() {
+  document.getElementById("myColor").value = "#FFFFFF";
+}
+function bluebelt() {
+  document.getElementById("myColor").value = "#0000FF";
+}
+function purplebelt() {
+  document.getElementById("myColor").value = "#9932CC";
+}
+function brownbelt() {
+  document.getElementById("myColor").value = "#800000";
+}
+function blackbelt() {
+  document.getElementById("myColor").value = "#000000";
+}
+</script>
+
+</body>
+</html>

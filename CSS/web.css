@@ -1,0 +1,210 @@
+body { /* defines the defauly body style  */
+padding-top: 10px;
+padding-bottom: 80px;
+background-color: black;
+margin: 0px;
+
+
+}
+
+h1 { /*  defines basic header style */
+  font-family:Arima Madurai;
+  font-style:italic;
+  font-style:bold;
+  text-align:center;
+  color: white;
+}
+h2 {
+  font-family:Arima Madurai;
+  font-style:italic;
+  font-style:bold;
+  text-align:center;
+  color: white;
+}
+
+h3 {
+  font-family:Arima Madurai;
+  font-style:italic;
+  font-style:bold;
+  padding-left:50px;
+  color: white;
+}
+p { /* defines basic paragpraph style  */
+  color: white;
+  
+}
+
+.center { /* a class responsible for centering any object  */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.navbar { /*  navbar class */
+  overflow: hidden;
+  background-color: #333;
+  width: 100%;
+}
+
+
+.navbar a { 
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 196px;
+  text-decoration: none;
+}
+
+
+.subnav {
+  float: left;
+  overflow: hidden;
+}
+
+
+.subnav .subnavbtn { /* a class that defines the dropdown in the navigation bar  */
+  color: white;
+  padding: 14px 196px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  font-size: 16px; 
+  border: none;
+  outline: none;
+}
+
+.navbar a:hover, .subnav:hover .subnavbtn { /* controls the hover colours  */
+  background-color: white;
+  color: black;
+}
+
+
+.subnav-content {
+  color: black;
+  background-color: #effffa;
+  width: 100%;
+  z-index: 1;
+  display: none;
+  position: absolute;
+  left: 0;
+
+}
+
+
+.subnav-content a {
+  color: black;
+  text-decoration: none;
+  float: left;
+  color: black;
+}
+
+
+.subnav-content a:hover { /* controles hover colours of the dropdown menu  */
+  background-color: #eee;
+  color: black;
+}
+
+
+.subnav:hover .subnav-content {
+  display: block;
+}
+
+* {box-sizing:border-box}
+
+
+.slideshow-container { /* controles the slideshow container or box  */
+  max-width: 950px;
+  position: relative;
+  margin: auto;
+}
+
+
+.slideShow {
+  display: none;
+}
+
+
+.prev, .next { /* defines the buttons on the slideshow  */
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: #a8b7b6;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 1.0s ease;
+  border-radius: 0 4px 4px 0;
+
+}
+
+.next {
+  right: 0;
+  border-radius: 4px 1 1 4px;
+}
+
+
+.prev:hover, .next:hover { /* controls the colours when hovering over the buttons  */
+  background-color:blue;
+  color: white;
+}
+ 
+.dot { /* defines the points underneath the slideshow  */
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 1.0s ease;
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: white;
+
+}
+
+.active, .dot:hover {
+  background-color: blue;
+}
+
+
+.fade { /* controls animation when switching picture  */
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s; /* controls time of animation  */
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade { /* controls the effects and intensity of the fade animation */
+  from {opacity: .01} /* controls intensity of the opacity effect  */
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .01} 
+  to {opacity: 1}
+}
+
+figure{ /*  used to control the image being displayed in a line for popular items */
+	padding-left: 80px;
+    display: inline-block;
+}
+figcaption{
+	color:white;
+	text-align:center;
+}
+
+
+  position: relative;
+}
+
+
+
+.cursor {
+  cursor: pointer;
+}
+
+
+
+

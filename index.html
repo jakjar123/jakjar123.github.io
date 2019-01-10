@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<link rel="stylesheet" href="CSS/web.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Used across all my html pages to ensure that the website works on other devices -->
+<img src="Assets/logo2.jpg" alt="Tatami Fightwear Logo" style="width:450px;height:150px;">
+
+
+<!-- This is my navigation memu -->
+<div class="navbar"> <!-- Class -->
+  <a href="index.html">Home</a> <!-- Sets up the links in the navigation bar -->
+  <div class="subnav"> 
+    <button class="subnavbtn">Male Fightwear <i class="dropdown"></i></button> <!-- Sets up the links in the navigation bar as well as the dropdown navigation bar -->
+    <div class="subnav-content">
+      <a href="mGi.html">BJJ Gi</a> <!-- Links in the dropdown menu of the navigation bar -->
+      <a href="mNogi.html">No-Gi</a>
+    </div>
+  </div> 
+<a href="demo.html">Demo</a> <!-- SLink to demo page -->
+  
+  <a href="belts.html">Belts</a>
+</div>
+<h1>Discover our latest Tatamifighwear Gi- The Estilo 6.0</h1> <!-- Header explaining the slideshow below -->
+
+<div class="slideshow-container"> <!-- My slideshow code starts here -->
+
+
+  <div class="slideShow fade">
+    
+ <a href="estilo.html">   <img src="Assets/img1.jpg" style="width:100%; height: 800px;"></a> <!-- decides the size of the picture and provides the source of the picture as well-->
+    
+  </div>
+
+  <div class="slideShow fade">
+    
+ <a href="estilo.html">   <img src="Assets/img2.jpg" style="width:100%; height: 800px;"></a>
+    
+  </div>
+
+  <div class="slideShow fade">
+    
+  <a href="estilo.html">  <img src="Assets/img3.jpg" style="width:100%; height: 800px;"></a>
+    
+  </div>
+
+
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a> <!-- The next and previous buttons that control the slideshow -->
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>  <!-- The points that are found below the slideshow that also allow the user to choose the picture -->
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+
+function plusSlides(n) { <!-- Java Script for slideshow -->
+  showSlides(slideIndex += n);
+}
+
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("slideShow");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1} 
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none"; 
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block"; 
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+<h2>Popular Items</h2>
+<figure>
+  <a href="estilo.html">   <img style = "width:450px; height:400px; border-radius: 50%;" src='Assets/pop1.jpg' alt='Estilo 6.0' /></a> <!-- Popular items pictures displayed and are hyperlinked to their respective pages -->
+     <figcaption><a href="estilo.html">£99.00</a></figcaption> <!-- Popular items pictures are displayed in a line -->
+</figure>
+<figure>
+   <a href="japan.html"><img style = "width:450px; height:400px; border-radius: 50%;" src='Assets/pop2.jpg' alt='Japan Series' /></a>
+<figcaption><a href="japan.html"><£120.00</a></figcaption>
+</figure>
+<figure>
+    <a href="rGuard.html"><img style = "width:450px; height:400px; border-radius: 50%;" src='Assets/pop3.jpg' alt='Rash Guard' /></a>
+  <figcaption><a href="rGuard.html">£35.99</a></figcaption>
+</figure>
+<figure>
+  <a href="belts.html"><img style = "width:450px; height:400px; border-radius: 50%;" src='Assets/pop5.jpg' alt='Belts' /></a>
+    <figcaption><a href="japan.html">£15.99</a></figcaption>
+</figure>
+<figure>
+   <a href="shorts.html">  <img style = "width:450px; height:400px; border-radius: 50%;" src='Assets/pop6.jpg' alt='Shorts' /></a>
+     <figcaption><a href="shorts.html">£25.00</a></figcaption>
+</figure>
+</body>
+</html>
